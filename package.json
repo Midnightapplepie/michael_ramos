@@ -1,0 +1,16 @@
+{
+  "name": "Mike_Ramos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mike's Website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Xu, Paul Yu",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "request": "^2.60.0"
+  }
+}
