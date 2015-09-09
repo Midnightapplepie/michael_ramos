@@ -19,7 +19,11 @@ app.set('views',__dirname + '/views');
 app.use(express.static(path.join(__dirname, 'asset')));
 
 app.get('/',function(request,response){
-	response.render("index")
+	response.render("video")
+})
+
+app.get('/blog',function(request,response){
+	response.render("blog")
 })
 
 app.listen(app.get('port'), function() {
