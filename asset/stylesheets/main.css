@@ -1,17 +1,142 @@
 body{
-	background: rgb(66,66,66);
+	/*background: rgb(66,66,66);*/
+
 	width: 100%;
 	height: 100%;
+	box-sizing: border-box;
+	overflow-x:hidden; 
 }
 
-.color-wht{
-	color: white;
+.active-bg {
+	background: url(../images/deflated.jpeg) no-repeat center center ;
+	background-size: cover;
+	position: absolute;
+	transition: 2s;
+	/*transition: background-image 3s ease-in-out;*/
+}
+
+.shift {
+	left: -50%;
 }
 
 .main-videos{
+	width: 100%;
+	height: 100%;	
 	display: block;
-	width: 75vw;
-	height: calc(75vw * 9/16);
-	margin: 0 auto;
-	display: block;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 3s;
+
 }
+
+.show-video{
+	opacity: 1;
+}
+
+.video-container {
+	display: block;
+	width: 70vw;
+	height: calc(70vw * 9/16);
+	margin: 0 auto;
+	position: relative;
+}
+
+.play-button {
+	display: block;
+	/*margin: auto;*/
+	position: ;
+	top: 50%;
+	left: 50%;
+}
+
+.navigation {
+	font-family: 'Nova Square', sans-serif;
+	text-align: center;
+	background-color: ;
+	/*padding-bottom: 20px;*/
+}
+
+ul {
+	list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+	font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+  display: inline-block;
+}
+
+a {
+	text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+a:hover {
+	color: red;
+}
+
+a.active {
+	background-color: #fff;
+	color: #444;
+	cursor: default;
+}
+
+.videos-list {
+	text-align: center;
+}
+
+.videos-list li {
+	padding-left: 20px;	
+	padding-right: 20px;
+}
+
+
+
+/*.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+  display: inline-block;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.navigation a:hover {
+	color: red;
+}
+
+.navigation a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+.videos ul {
+	list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.videos li {
+	font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+  display: inline-block;
+}*/
