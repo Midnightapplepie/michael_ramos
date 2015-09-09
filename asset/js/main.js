@@ -17,5 +17,5 @@ function add_class (targetele, className){
 }
 
 function changeBackground(){
-	add_class(".main-container","shift");
+	add_class(".active-bg","shift");
 }

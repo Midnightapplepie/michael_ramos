@@ -2,43 +2,40 @@ body{
 	/*background: rgb(66,66,66);*/
 
 	width: 100vw;
-	height: 100vh;
-	overflow-x:hidden; 
+	height: 100vh; 
 	margin: 0;
 }
 
-.main-container{
-	left: -100vw;
-	width: 300vw;
-	height: 100vh;
-	position: absolute;
-	transition: 1.5s ease-in-out;
+.fixed-header{
+	position: fixed;
+	width: 100vw;
+	z-index: 1;
+	top:0;
 }
 
-.active-bg {
-	background: url(../images/deflated.jpeg) no-repeat center center;
-	left: 0;
+.main-container{
+	width: 100vw;
+	height: 100vh;
 }
+
+.active-bg{
+	display: block!important;
+}
+
 .bg{
-	display: inline-block;
+	left:0;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position:  center center;
+	display: none;
 	width: 100vw;
 	height: 100vh;
 	background-size: cover;
-	z-index: -10;
-}
-
-.left-bg{
-	left: -100%;
-	background: green;
-}
-
-.right-bg{
-	left: 100%;
-	background: red;
 }
 
 .shift {
-	left: -200vw;
+	left: -100vw;
+	transition: 1.5s ease-in-out;
 }
 
 .main-videos{
@@ -46,9 +43,7 @@ body{
 	height: 100%;	
 	display: block;
 	opacity: 0;
-	position: absolute;
 	transition: opacity 3s;
-
 }
 
 .show-video{
@@ -59,14 +54,13 @@ body{
 	display: block;
 	width: 70vw;
 	height: calc(70vw * 9/16);
-	margin: 0 auto;
+	margin: 20vh auto 0 auto;
 	position: relative;
 }
 
 .play-button {
 	display: block;
 	/*margin: auto;*/
-	position: ;
 	top: 50%;
 	left: 50%;
 }
@@ -117,6 +111,10 @@ a.active {
 	padding-right: 20px;
 }
 
+.header{
+	margin: 0;
+	padding: 1.5% 0; 
+}
 
 
 /*.navigation ul {

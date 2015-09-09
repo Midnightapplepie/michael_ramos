@@ -8,26 +8,27 @@
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-	<header class="navigation">
-		<h1 class="header"><a href="/">Mike Ramos</a></h1>
-		<ul>
-				{{!-- <li><a href="/">Home</a></li> --}}
-		</ul>
-	</header>
-	<div class="video-list">
-		<ul class="videos-list" onclick="changeBackground()">
-			<li><a href="#">Video 1</a></li>
-			<li><a href="#">Video 2</a></li>
-			<li><a href="#">Video 3</a></li>
-			<li><a href="#">Video 4</a></li>
-			<li><a href="#">Video 5</a></li>
-			<li><a href="/blog">Blog</a></li>
-		</ul>	
+	<div class="fixed-header">
+		<header class="navigation">
+			<h1 class="header"><a href="/">Mike Ramos</a></h1>
+			<ul>
+					{{!-- <li><a href="/">Home</a></li> --}}
+			</ul>
+		</header>
+		<div class="video-list">
+			<ul class="videos-list" onclick="changeBackground()">
+				<li><a href="#">Video 1</a></li>
+				<li><a href="#">Video 2</a></li>
+				<li><a href="#">Video 3</a></li>
+				<li><a href="#">Video 4</a></li>
+				<li><a href="#">Video 5</a></li>
+				<li><a href="/blog">Blog</a></li>
+			</ul>	
+		</div>
 	</div>
+	
 	<div class="main-container">
-		<div class="bg left-bg">{{{body}}}</div>
-		<div class="bg active-bg">{{{body}}}</div>
-		<div class="bg right-bg">{{{body}}}</div>
+		{{{body}}}
 	</div>
 </body>
 </html>
