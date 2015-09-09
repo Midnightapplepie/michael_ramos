@@ -16,3 +16,6 @@ function add_class (targetele, className){
 	console.log("yes");
 }
 
+function changeBackground(){
+	add_class(".main-container","shift");
+}
