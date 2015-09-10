@@ -19,13 +19,20 @@ app.set('views',__dirname + '/views');
 app.use(express.static(path.join(__dirname, 'asset')));
 
 var videos = [
-	{	link:"https://player.vimeo.com/video/27062255",
+	{	link:"https://player.vimeo.com/video/129634826",
 		image: "../images/newbbg.jpg",
 		info: "something something",
+		id: 1,
 		active: true},
-	{	link:"https://player.vimeo.com/vidoe/32988341",
-		image: "../images/anger.jpg",
+	{	link:"https://player.vimeo.com/video/121019035",
+		image: "../images/G_og_W2.png",
 		info: "something else",
+		id: 2,
+		active: false},
+	{	link:"https://player.vimeo.com/video/132457056",
+		image: "../images/green_bubbles.jpg",
+		info: "Some Some Some",
+		id: 3,
 		active: false}
 		]
 

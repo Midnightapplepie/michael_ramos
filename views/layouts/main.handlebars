@@ -16,18 +16,18 @@
 			</ul>
 		</header>
 		<div class="video-list">
-			<ul class="videos-list" onclick="changeBackground()">
-				<li><a href="#">Video 1</a></li>
-				<li><a href="#">Video 2</a></li>
-				<li><a href="#">Video 3</a></li>
-				<li><a href="#">Video 4</a></li>
-				<li><a href="#">Video 5</a></li>
+			<ul class="videos-list">
+				{{#each data}}
+					<li data-id = {{this.id}} onclick="changeBackground(this)">
+						<a href="#{{this.id}}">Video {{this.id}}</a>
+					</li>
+				{{/each}}
 				<li><a href="/blog">Blog</a></li>
 			</ul>	
 		</div>
 	</div>
-	
-	<div class="main-container">
+
+	<div id="main-container" class="main-container">
 		{{{body}}}
 	</div>
 </body>

@@ -1,11 +1,13 @@
 {{#each data}}
 {{#if this.active}}
-	<div class="bg active-bg" style="background-image: url({{image}})">
+	<div id="vid-{{this.id}}" class="bg show" style="background-image: url({{image}})">
 {{else }}
-	<div class="bg" style="background-image: url({{image}})">
+	<div id="vid-{{this.id}}" class="bg hide-right" style="background-image: url({{image}})">
 {{/if}}
 		<div class="video-container">
-		<div class="play-button" onclick="add_class('.main-videos', 'show-video')"><a href="#">button</a></div>
+			<div class="play-button" onclick="add_class('.main-videos', 'show-video')">
+				<a href="#">button</a>
+			</div>
 
 		<iframe class="main-videos" src={{this.link}} width="75%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 

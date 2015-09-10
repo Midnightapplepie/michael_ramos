@@ -18,24 +18,33 @@ body{
 	height: 100vh;
 }
 
-.active-bg{
-	display: block!important;
+.hide-left{
+	left: -100vw!important;
+	transition: 1.5s;
 }
 
+.hide-right{
+	left: 100vw!important;
+	transition: 1.5s;	
+}
+
+.show{
+	left: 0;
+	transition: 1.4s;	
+}
+
+/*.slide-in{
+	transform: translateX(0vw)!important;
+	transition: 1.5s;
+}*/
+
 .bg{
-	left:0;
 	position: absolute;
 	background-repeat: no-repeat;
 	background-position:  center center;
-	display: none;
 	width: 100vw;
 	height: 100vh;
 	background-size: cover;
-}
-
-.shift {
-	left: -100vw;
-	transition: 1.5s ease-in-out;
 }
 
 .main-videos{
@@ -43,7 +52,7 @@ body{
 	height: 100%;	
 	display: block;
 	opacity: 0;
-	transition: opacity 3s;
+	transition: opacity 2s;
 }
 
 .show-video{
