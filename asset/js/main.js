@@ -31,19 +31,17 @@ function remove_class(targetele, className){
 function changeBackground(ele){
 	var id = ele.getAttribute("data-id");
 	var oldActive = document.getElementsByClassName("show")[0];
+	var oldId = oldActive.id.substr(4)
 	var newActive = document.getElementById("vid-"+id);
 	//shift .active-bg
 	add_class(newActive,"show");
-	if (newActive.className.indexOf("hide-left") > -1){
-		add_class(oldActive,"hide-right")
-	}else{
+	if (id > oldId){
 		add_class(oldActive,"hide-left")
+	}else{
+		add_class(oldActive,"hide-right")
 	}
-	remove_class(newActive,"hide-right");
-
 	remove_class(oldActive,"show");
 	remove_class(newActive,"hide-left");
 	remove_class(newActive,"hide-right");
-
 }
 

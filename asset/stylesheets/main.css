@@ -20,23 +20,18 @@ body{
 
 .hide-left{
 	left: -100vw!important;
-	transition: 1.5s;
+	transition: 1s;
 }
 
 .hide-right{
 	left: 100vw!important;
-	transition: 1.5s;	
+	transition: 1s;	
 }
 
 .show{
 	left: 0;
-	transition: 1.4s;	
+	transition: 1s;	
 }
-
-/*.slide-in{
-	transform: translateX(0vw)!important;
-	transition: 1.5s;
-}*/
 
 .bg{
 	position: absolute;
