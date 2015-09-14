@@ -11,10 +11,8 @@
 
 function add_class (targetele, className){
 	if (targetele.className.indexOf(className) == -1){
-		console.log(targetele.className.indexOf(className) == -1)
 		var klass = targetele.className + " " + className;
 		targetele.className = klass;
-		console.log("yes");
 	}
 }
 
@@ -29,19 +27,27 @@ function remove_class(targetele, className){
 }
 
 function changeBackground(ele){
-	var id = ele.getAttribute("data-id");
-	var oldActive = document.getElementsByClassName("show")[0];
-	var oldId = oldActive.id.substr(4)
-	var newActive = document.getElementById("vid-"+id);
-	//shift .active-bg
-	add_class(newActive,"show");
-	if (id > oldId){
-		add_class(oldActive,"hide-left")
-	}else{
-		add_class(oldActive,"hide-right")
+	var clicked = document.getElementById("vid-" + ele.getAttribute("data-id")); 
+	if (clicked.className.indexOf("show") > -1){
+		return;
+	}else{	
+		updateClass(ele);
 	}
-	remove_class(oldActive,"show");
-	remove_class(newActive,"hide-left");
-	remove_class(newActive,"hide-right");
 }
 
+function updateClass(ele){
+		var id = ele.getAttribute("data-id");
+		var oldActive = document.getElementsByClassName("show")[0];
+		var oldId = oldActive.id.substr(4);
+		var newActive = document.getElementById("vid-"+id);
+		//shift .active-bg
+		add_class(newActive,"show");
+		if (id > oldId){
+			add_class(oldActive,"hide-left")
+		}else{
+			add_class(oldActive,"hide-right")
+		}
+		remove_class(oldActive,"show");
+		remove_class(newActive,"hide-left");
+		remove_class(newActive,"hide-right");
+}
