@@ -1,17 +1,17 @@
 {{#each data}}
 {{#if this.active}}
-	<div id="vid-{{this.id}}" class="bg show" style="background-image: url({{image}})">
+	<div id="vid-{{@index}}" class="bg show" style="background-image: url({{thumbnail_large}})">
 {{else }}
-	<div id="vid-{{this.id}}" class="bg hide-right" style="background-image: url({{image}})">
+	<div id="vid-{{@index}}" class="bg hide-right" style="background-image: url({{thumbnail_large}})">
 {{/if}}
 		<div class="video-container">
-			<div class="play-button" onclick="add_class('.main-videos', 'show-video')">
+			<div class="play-button" onclick="showVideo()">
 				<a href="#">button</a>
 			</div>
 
-		<iframe class="main-videos" src={{this.link}} width="75%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<iframe class="main-videos" src="https://player.vimeo.com/video/{{id}}" width="75%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-		{{!-- <p><a href="https://vimeo.com/134398465">David Gilmour - Rattle That Lock</a> from <a href="https://vimeo.com/trunkanimation">Trunk Animation</a> on <a href="https://vimeo.com">Vimeo</a>.</p> --}}
+		<p><a href={{url}}>{{title}}</a> from <a href={{user_url}}>{{user_name}}</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 	</div>
 </div>
 {{/each}}

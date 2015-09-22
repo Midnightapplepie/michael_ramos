@@ -18,8 +18,8 @@
 		<div class="video-list">
 			<ul class="videos-list">
 				{{#each data}}
-					<li data-id = {{this.id}} onclick="changeBackground(this)">
-						<a href="#{{this.id}}">Video {{this.id}}</a>
+					<li data-id = {{@index}} onclick="changeBackground(this)">
+						<a href="#{{title}}">{{title}}</a>
 					</li>
 				{{/each}}
 				<li><a href="/blog">Blog</a></li>

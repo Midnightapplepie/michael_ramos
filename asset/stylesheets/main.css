@@ -20,17 +20,17 @@ body{
 
 .hide-left{
 	left: -100vw!important;
-	transition: 1s;
+	transition: linear 1s;
 }
 
 .hide-right{
 	left: 100vw!important;
-	transition: 1s;	
+	transition: linear 1s;	
 }
 
 .show{
 	left: 0;
-	transition: 1s;	
+	transition: linear 1s;	
 }
 
 .bg{
