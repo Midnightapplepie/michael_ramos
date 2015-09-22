@@ -39,7 +39,7 @@ function updateClass(ele){
 		add_class(newActive,"show");
 		for(var i = 0; i < videos.length; i++){
 			console.log(videos[i].id.substr(4));
-			if(videos[i].id.substr(4) == id ){
+			if(videos[i].id.substr(4) === id ){
 				videos[i].className = "bg show";
 			}else if(videos[i].id.substr(4) < id){
 				videos[i].className = "bg hide-left";

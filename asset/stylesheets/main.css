@@ -20,17 +20,23 @@ body{
 
 .hide-left{
 	left: -100vw!important;
-	transition: linear 1s;
+	-webkit-transition-timing-function: linear; /* Safari and Chrome */
+    transition-timing-function: linear;
+	transition: 1s;
 }
 
 .hide-right{
 	left: 100vw!important;
-	transition: linear 1s;	
+	-webkit-transition-timing-function: linear; /* Safari and Chrome */
+    transition-timing-function: linear;
+	transition:  1s;	
 }
 
 .show{
 	left: 0;
-	transition: linear 1s;	
+	-webkit-transition-timing-function: linear; /* Safari and Chrome */
+    transition-timing-function: linear;
+	transition: 1s;	
 }
 
 .bg{
