@@ -35,21 +35,40 @@ function updateClass(ele){
 		var videos = document.getElementsByClassName("bg");
 		var oldActive = document.getElementsByClassName("show")[0];
 		var newActive = document.getElementById("vid-"+id);
+		var oldId = oldActive.id.substr(4)
 
-		add_class(newActive,"show");
-		for(var i = 0; i < videos.length; i++){
-			console.log(videos[i].id.substr(4));
-			if(videos[i].id.substr(4) === id ){
-				videos[i].className = "bg show";
-			}else if(videos[i].id.substr(4) < id){
-				videos[i].className = "bg hide-left";
-			}else{
-				videos[i].className = "bg hide-right";
-			}
-			
+		console.log(oldActive);
+		console.log(newActive);
+
+		newActive.className = "bg show";
+		if (oldId < id){
+			add_class(oldActive,"hide-left");
+		}else{
+			add_class(oldActive,"hide-right");
 		}
+
+		setTimeout(function(){
+			var hidden = [];
+			//create array of non new and previous slide
+			for(var i=0; i < videos.length; i++){
+				if (videos[i].id.substr(4) !== id && videos[i].id.substr(4) !== oldId){
+					hidden.push(videos[i]);
+				}
+
+			}
+			//update class of hidden slide with a delay
+			for(var i = 0; i < hidden.length; i++){
+				if(hidden[i].id.substr(4) < id){
+					hidden[i].className = "bg hide-left";
+				}else{
+					hidden[i].className = "bg hide-right";
+				}
+			}
+		}, 300)
 		//shift .active-bg
-		remove_class(oldActive,"show");
-		remove_class(newActive,"hide-left");
-		remove_class(newActive,"hide-right");
+		setTimeout(function(){
+			remove_class(newActive,"hide-left");
+			remove_class(newActive,"hide-right");
+			remove_class(oldActive,"show");
+		},1000)
 }
