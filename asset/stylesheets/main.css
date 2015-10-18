@@ -182,6 +182,17 @@ a.active {
 	padding: 1.5% 0; 
 }
 
+.navigation {
+	border: 1px black solid;
+
+}
+
+.navigation h1 {
+	border: 1px red solid;
+	display: inline-block;
+
+}
+
 
 /*.navigation ul {
   list-style: none;
