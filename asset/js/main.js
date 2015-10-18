@@ -1,8 +1,9 @@
 function showVideo(){
 	var vid = document.getElementsByClassName('show')[0].getElementsByClassName('main-videos')[0];
+	var filter = document.querySelectorAll(".bg.show .filter")[0];
 	add_class(vid,'show-video');
+	add_class(filter,"op-08");
 }
-
 
 function add_class (targetele, className){
 	if (targetele.className.indexOf(className) == -1){
@@ -29,46 +30,55 @@ function changeBackground(ele){
 		updateClass(ele);
 	}
 }
-
-function updateClass(ele){
-		var id = ele.getAttribute("data-id");
-		var videos = document.getElementsByClassName("bg");
-		var oldActive = document.getElementsByClassName("show")[0];
-		var newActive = document.getElementById("vid-"+id);
-		var oldId = oldActive.id.substr(4)
-
-		console.log(oldActive);
-		console.log(newActive);
-
-		newActive.className = "bg show";
-		if (oldId < id){
-			add_class(oldActive,"hide-left");
+function hideOld(data){
+		if (data["oldId"] < data["id"]){
+			add_class(data["oldActive"],"hide-left");
 		}else{
-			add_class(oldActive,"hide-right");
+			add_class(data["oldActive"],"hide-right");
 		}
+}
 
+function updateHiddenSlides(data){
 		setTimeout(function(){
 			var hidden = [];
 			//create array of non new and previous slide
-			for(var i=0; i < videos.length; i++){
-				if (videos[i].id.substr(4) !== id && videos[i].id.substr(4) !== oldId){
-					hidden.push(videos[i]);
+			for(var i=0; i < data["videos"].length; i++){
+				if (data["videos"][i].id.substr(4) !== data["id"] && data["videos"][i].id.substr(4) !== data["oldId"]){
+					hidden.push(data["videos"][i]);
 				}
 
 			}
 			//update class of hidden slide with a delay
 			for(var i = 0; i < hidden.length; i++){
-				if(hidden[i].id.substr(4) < id){
+				if(hidden[i].id.substr(4) < data["id"]){
 					hidden[i].className = "bg hide-left";
 				}else{
 					hidden[i].className = "bg hide-right";
 				}
 			}
 		}, 300)
+}
+
+function updateOldandNewActive(data){
 		//shift .active-bg
 		setTimeout(function(){
-			remove_class(newActive,"hide-left");
-			remove_class(newActive,"hide-right");
-			remove_class(oldActive,"show");
+			remove_class(data["newActive"],"hide-left");
+			remove_class(data["newActive"],"hide-right");
+			remove_class(data["oldActive"],"show");
 		},1000)
+}
+
+function updateClass(ele){
+		var data = {}
+		data["id"] = ele.getAttribute("data-id");
+		data["videos"] = document.getElementsByClassName("bg");
+		data["oldActive"] = document.getElementsByClassName("show")[0];
+		data["newActive"] = document.getElementById("vid-"+data["id"]);
+		data["oldId"] = data["oldActive"].id.substr(4)
+
+		data["newActive"].className = "bg show";
+		hideOld(data);
+		updateHiddenSlides(data);
+		updateOldandNewActive(data);
+
 }

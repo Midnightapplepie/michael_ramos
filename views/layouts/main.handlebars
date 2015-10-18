@@ -11,22 +11,8 @@
 	<div class="fixed-header">
 		<header class="navigation">
 			<h1 class="header"><a href="/">Mike Ramos</a></h1>
-			<ul>
-					{{!-- <li><a href="/">Home</a></li> --}}
-			</ul>
 		</header>
-		<div class="video-list">
-			<ul class="videos-list">
-				{{#each data}}
-					<li data-id = {{@index}} onclick="changeBackground(this)">
-						<a href="#{{title}}">{{title}}</a>
-					</li>
-				{{/each}}
-				<li><a href="/blog">Blog</a></li>
-			</ul>	
-		</div>
 	</div>
-
 	<div id="main-container" class="main-container">
 		{{{body}}}
 	</div>

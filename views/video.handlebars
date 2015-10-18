@@ -4,14 +4,29 @@
 {{else }}
 	<div id="vid-{{@index}}" class="bg hide-right" style="background-image: url({{thumbnail_large}})">
 {{/if}}
+	<div class="filter"></div>
 		<div class="video-container">
-			<div class="play-button" onclick="showVideo()">
-				<a href="#">button</a>
-			</div>
 
 		<iframe class="main-videos" src="https://player.vimeo.com/video/{{id}}" width="75%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-		<p><a href={{url}}>{{title}}</a> from <a href={{user_url}}>{{user_name}}</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+		<!--<p><a href={{url}}>{{title}}</a> from <a href={{user_url}}>{{user_name}}</a> on <a href="https://vimeo.com">Vimeo</a>.</p>-->
 	</div>
 </div>
 {{/each}}
+
+<div id="2" class="videos-list">
+	<ul>
+		{{#each data}}
+			<div id="vid-li-{{@index}}" onclick="showVideo()">{{title}}</div>
+			<li class="vid-nav" data-id = {{@index}} onclick="changeBackground(this)">
+				<a href="#{{title}}"></a>
+			</li>
+		{{/each}}
+	</ul>	
+</div>
+
+<script type="text/javascript" src="js/video.js"></script>
+
+			<div class="play-button" onclick="showVideo()">
+				<a href="#">button</a>
+			</div>

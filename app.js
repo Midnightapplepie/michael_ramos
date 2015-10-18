@@ -28,7 +28,7 @@ app.get('/',function(request,response){
 		body_data = JSON.parse(body);
 		body_data[0]["active"]= true;
 		console.log(Array.isArray(body_data));
-		
+		console.log(body_data);
 		response.render("video",{data: body_data})
 	})	
 
