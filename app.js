@@ -19,8 +19,11 @@ app.set('views',__dirname + '/views');
 //app.use will enable specific folder to be accessed by express, enable sendFile/load file from such folder 
 app.use(express.static(path.join(__dirname, 'asset')));
 
-
 app.get('/',function(request,response){
+	response.render("home")
+})
+
+app.get('/videos',function(request,response){
 	var url = "http://vimeo.com/api/v2/michaelramos/videos.json";
 	var body_data;
 	
