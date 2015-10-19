@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/video.css">
+<script type="text/javascript" src="js/video.js"></script>
+
 {{#each data}}
 {{#if this.active}}
 	<div id="vid-{{@index}}" class="bg show" style="background-image: url({{thumbnail_large}})">
@@ -5,7 +8,7 @@
 	<div id="vid-{{@index}}" class="bg hide-right" style="background-image: url({{thumbnail_large}})">
 {{/if}}
 	<div class="filter"></div>
-		<div class="video-container">
+		<div class="video-container z-ng5">
 
 		<iframe class="main-videos" src="https://player.vimeo.com/video/{{id}}" width="75%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
@@ -16,17 +19,12 @@
 
 <div id="2" class="videos-list">
 	<ul>
+		<div id="selected-title" class="hidden" onclick="showVideo()"></div>
 		{{#each data}}
-			<div id="vid-li-{{@index}}" onclick="showVideo()">{{title}}</div>
-			<li class="vid-nav" data-id = {{@index}} onclick="changeBackground(this)">
+			<div id="vid-li-{{@index}}">{{title}}</div>
+			<li class="vid-nav" data-id = {{@index}} data-title="{{title}}"" onclick="changeBackground(this)">
 				<a href="#{{title}}"></a>
 			</li>
 		{{/each}}
 	</ul>	
 </div>
-
-<script type="text/javascript" src="js/video.js"></script>
-
-			<div class="play-button" onclick="showVideo()">
-				<a class="button" href="#">play</a>
-			</div>
