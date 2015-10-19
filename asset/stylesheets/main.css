@@ -92,6 +92,11 @@ body{
 	background: rgba(0,0,0,0.5);
 	display: block;
 	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin:	auto;
 }
 
 .navigation {
@@ -184,12 +189,14 @@ a.active {
 
 .navigation {
 	border: 1px black solid;
+	height: 100px;	
 
 }
 
 .navigation h1 {
 	border: 1px red solid;
 	display: inline-block;
+	height: 100px;
 
 }
 
