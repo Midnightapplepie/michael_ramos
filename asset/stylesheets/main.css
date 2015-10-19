@@ -89,8 +89,8 @@ body{
 	z-index: 1;
 	width: 5vw;
 	height: 3vw;
-	background: rgba(0,0,0,0.5);
-	display: block;
+	/*background: rgba(0,0,0,0.5);*/
+	/*display: block;*/
 	position: absolute;
 	top: 0;
 	bottom: 0;
