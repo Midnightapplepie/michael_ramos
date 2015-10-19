@@ -1,12 +1,8 @@
-function showVideo(){
-	var vid = document.getElementsByClassName('show')[0].getElementsByClassName('main-videos')[0];
-	var filter = document.querySelectorAll(".bg.show .filter")[0];
-	add_class(vid,'show-video');
-	add_class(filter,"op-08");
-}
-
 function add_class (targetele, className){
-	if (targetele.className.indexOf(className) == -1){
+	var index = targetele.className.indexOf(className);
+	if(targetele.className == ""){
+		targetele.className = className;
+	}else if (index == -1){
 		var klass = targetele.className + " " + className;
 		targetele.className = klass;
 	}
@@ -15,9 +11,10 @@ function add_class (targetele, className){
 function remove_class(targetele, className){
 	var targetClass = className;
 	var klass = targetele.className
-	if (klass.indexOf(targetClass) == 0){
+	var index = klass.indexOf(targetClass)
+	if (index == 0){
 		targetele.className = klass.replace(targetClass,"");
-	}else{
+	}else if(index > 0){
 		targetele.className = klass.replace(" "+targetClass,"");
 	}
 }

@@ -5,6 +5,22 @@ body{
 	overflow: hidden;
 }
 
+.z-ng5{
+	z-index: -5;
+}
+
+.z-1{
+	z-index: 1;
+}
+
+.hidden{
+	display: none!important;
+}
+
+.dp-ib{
+	display: inline-block;
+}
+
 .fixed-header{
 	position: fixed;
 	width: 100vw;
@@ -61,100 +77,10 @@ body{
     transition: 2s;
 }
 
-.op-08{
-	opacity: 0.8;
-}
-
-.main-videos{
-	width: 100%;
-	height: 100%;	
-	display: block;
-	opacity: 0;
-	transition: opacity 2s;
-}
-
-.show-video{
-	opacity: 1;
-}
-
-.video-container {
-	display: block;
-	height: 70vh;
-	width: calc(70vh * 16/9);
-	margin: 15vh auto 0 auto;
-	position: relative;
-}
-
-.play-button {
-	z-index: 1;
-	width: 5vw;
-	height: 3vw;
-	background: rgba(0,0,0,0.5);
-	display: block;
-	position: absolute;
-}
-
 .navigation {
 	font-family: 'Nova Square', sans-serif;
 	text-align: center;
 	background-color: ;
-}
-
-.videos-list ul {
-	list-style: none;
-  	padding: 0;
-  	margin: 0;
-  	height: 4vw;
-  	line-height: 4vw;
-  	display: inline-block;
-  	position: relative;
-}
-
-.videos-list li {
-	box-sizing: border-box;
-	width: 2.5vw;
-	height: 2.5vw;
-	border-radius: 50%;
-	background: black;
-	opacity: 0.5;
-	border: 4px solid white;
-  	display: inline-block;
-  	margin-right: 1em;
-  	vertical-align: middle;
-  	transition: 0.15s linear;
-    -webkit-transition: 0.15s linear;
-}
-
-.videos-list li:hover{
-	width: 3.5vw;
-	height: 3.5vw;
-    transition: 0.05s linear;
-    -webkit-transition: 0.05s linear;
-}
-
-.show-title{
-	color: white!important;
-	text-shadow: 2px 2px 6px black;
-	transition: 0.3s linear;
-    -webkit-transition: 0.3s linear;
-}
-
-.videos-list ul div{
-	width: 100%;
-	bottom: 100%;
-	display: inline-block;
-	position: absolute;
-    left: 0;
-    right: 0;
-    color: transparent;
-}
-
-.videos-list a {
-	width: 100%;
-	height: 100%;
-	text-decoration: none;
-  	color: #fff;
-  	display: block;
 }
 
 a:hover {
@@ -168,14 +94,6 @@ a.active {
 	cursor: default;
 }
 
-.videos-list {
-	position: absolute;
-	left: 0;
-	right: 0;
-	height: 10vh;
-	bottom: 0;
-	text-align: center;
-}
 
 .header{
 	margin: 0;
