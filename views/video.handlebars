@@ -22,7 +22,7 @@
 		<div id="selected-title" class="hidden" onclick="showVideo()"></div>
 		{{#each data}}
 			<div id="vid-li-{{@index}}">{{title}}</div>
-			<li class="vid-nav" data-id = {{@index}} data-title="{{title}}"" onclick="changeBackground(this)">
+			<li class="vid-nav" data-id = {{@index}} data-title="{{title}}" onclick="changeBackground(this)">
 				<a href="#{{title}}"></a>
 			</li>
 		{{/each}}

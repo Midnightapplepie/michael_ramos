@@ -1,9 +1,9 @@
 
 .video-container {
 	display: block;
-	height: 70vmin;
+	height: 65vmin;
 	width: auto;
-	margin: 15vh auto 0 auto;
+	margin: 15vh 10vw 0 10vw;
 	position: relative;
 }
 .op-08{
@@ -29,24 +29,26 @@
 	display: block;
 	position: absolute;
 }
+
 .videos-list ul {
 	list-style: none;
   	padding: 0;
   	margin: 0;
-  	height: 4vw;
-  	line-height: 4vw;
+  	height: 40px;
+  	line-height: 40px;
   	display: inline-block;
-  	position: relative;
 }
 
 .videos-list li {
 	box-sizing: border-box;
+	min-width: 50px;
+	min-height: 20px;
+	max-height: 25px;
 	width: 2.5vw;
 	height: 2.5vw;
-	border-radius: 50%;
-	background: black;
+	background: white;
 	opacity: 0.5;
-	border: 4px solid white;
+	border: 4px solid;
   	display: inline-block;
   	margin-right: 1em;
   	vertical-align: middle;
@@ -55,12 +57,10 @@
 }
 
 .brd-clr-blu{
-	border-color: blue!important;
+	border-color: white!important;
 }
 
 .videos-list li:hover{
-	width: 3.5vw;
-	height: 3.5vw;
     transition: 0.05s linear;
     -webkit-transition: 0.05s linear;
 }
@@ -79,12 +79,12 @@
 
 .videos-list ul div{
 	width: auto;
-	bottom: 100%;
+	bottom: 0%;
 	display: inline-block;
 	position: absolute;
     left: 0;
     right: 0;
-    border-radius: 10px;
+    height: 40px;
     color: transparent;
 }
 

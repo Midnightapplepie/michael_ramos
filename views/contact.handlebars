@@ -1,1 +1,86 @@
-<h2>Contact</h2>
+<link rel="stylesheet" type="text/css" href="stylesheets/contact.css">
+<style>
+.frame{
+	float:left;
+	min-height: 200px;
+	width: 40%;
+}
+
+
+.about-me{
+	width: 60%;
+	float: right;
+}
+
+.top-container{
+	margin-top: 8vh;
+	display: flex;
+	justify-content:middle;
+	height: auto%;
+	min-height: 100px;
+	background-color: grey;
+	color: white;
+	padding: 3% 8% ;
+}
+
+.bottom-container{
+	padding: 2% 8%;
+	width: 100%;
+	display: flex;
+}
+
+.social-icons{
+	list-style-type: none;
+}
+
+.social-icons li{	
+	display: inline-block;
+	font-size: 3em;
+	margin-right: 0.8em;
+	line-height: 100%;
+	margin-bottom: 0;
+}
+
+.social-bar{
+	display: inline-block;
+	float: left;
+}
+.message-box{
+	display: inline-block;
+	float: left;
+}
+
+#name{
+	width: 35%;
+}
+#email{
+	width: 60%;
+	float: right;
+}
+#message{
+	width: 100%;
+}
+</style>
+<div class="top-container">
+	<div class="about-me">
+		<h1>About Me</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis nisl et velit lacinia, ac aliquet lectus sollicitudin. Praesent tincidunt lobortis tellus, ac porta nunc tempor vel. Vestibulum pharetra, diam eu luctus bibendum, dolor mi posuere velit, id faucibus lectus dolor a augue. Sed vel enim tempor, porta massa non, interdum risus. Vivamus sed iaculis ligula, sit amet elementum est. Aliquam quis justo sodales, iaculis quam vel, eleifend nisi. Praesent volutpat cursus ultrices. Nullam consectetur quam sem, ut iaculis massa ullamcorper eu. Aliquam erat volutpat. Vivamus nec nulla ultrices, pulvinar tortor id, elementum ligula. Donec luctus urna id vulputate rutrum. Phasellus sed nunc fermentum, sollicitudin nibh eu, imperdiet libero. In non eros id eros vehicula consectetur. Phasellus volutpat, augue ut vestibulum interdum, dui urna blandit ligula, ut consequat eros ex dignissim lacus.</p>
+	</div>
+	<div class="frame"></div>
+</div>
+<div class="bottom-container">
+	<div class="social-bar">
+		<ul class="social-icons">
+			<li class="brandico-facebook-rect"></li>
+			<li class="brandico-linkedin-rect"></li>
+			<li class="brandico-googleplus-rect"></li>
+			<li class="brandico-vimeo-rect"></li>
+		</ul>
+	</div>
+	<div class="message-box">
+		<input id="name" type="text" placeholder="Name">
+		<input id="email" type="text" placeholder="Email">
+		<input id="message" type="text" placeholder="Write to me">
+		<button id="msg-btn">Send</button>
+ 	</div>
+</div>
